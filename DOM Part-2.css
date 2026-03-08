@@ -1,0 +1,17 @@
+.parrot{
+    height: 600px;
+    width: 200px;
+    background-color: greenyellow;
+    border: 5px solid black;
+}
+
+.w{
+    background-color: rgb(82, 72, 184);
+    font-size: 30px;
+
+}
+.o{
+    color:aquamarine;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
