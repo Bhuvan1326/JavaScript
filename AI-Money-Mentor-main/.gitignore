@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.py[cod]
+*.class
+*.so
+.Python
+venv/
+.env
+.venv/
+env/
+
+# Build
+.next/
+dist/
+build/
+*.egg-info/
+
+# Database
+*.db
+*.db-journal
+prisma/*.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Testing
+coverage/
+.nyc_output/
+
+# Secrets
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,73 @@
+{
+  "name": "sample_portfolio",
+  "description": "Sample Indian Mutual Fund Portfolio for Testing",
+  "investor": {
+    "name": "Sample Investor",
+    "email": "investor@example.com",
+    "pan": "ABCDE1234F"
+  },
+  "holdings": [
+    {
+      "scheme_name": "Axis Bluechip Fund - Direct Plan - Growth",
+      "scheme_code": "119551",
+      "amc": "Axis Asset Management Co. Ltd.",
+      "isin": "INF846K011N2",
+      "category": "Large Cap Equity",
+      "units": 1500.50,
+      "current_nav": 52.34,
+      "current_value": 78536.17,
+      "sip_amount": 10000,
+      "sip_start_date": "2023-01-01"
+    },
+    {
+      "scheme_name": "Parag Parikh Flexi Cap Fund - Direct Plan - Growth",
+      "scheme_code": "122639",
+      "amc": "PPFAS Asset Management Co. Pvt. Ltd.",
+      "isin": "INF223J011Y9",
+      "category": "Flexi Cap",
+      "units": 800.25,
+      "current_nav": 68.92,
+      "current_value": 55153.30,
+      "sip_amount": 15000,
+      "sip_start_date": "2023-01-01"
+    },
+    {
+      "scheme_name": "Mirae Asset Large Cap Fund - Direct Plan - Growth",
+      "scheme_code": "118989",
+      "amc": "Mirae Asset Investment Managers (India) Pvt. Ltd.",
+      "isin": "INF602I010XX",
+      "category": "Large Cap Equity",
+      "units": 600.75,
+      "current_nav": 85.45,
+      "current_value": 51374.09,
+      "sip_amount": 5000,
+      "sip_start_date": "2023-06-01"
+    },
+    {
+      "scheme_name": "ICICI Prudential Technology Fund - Direct Plan - Growth",
+      "scheme_code": "120505",
+      "amc": "ICICI Prudential Asset Management Co. Ltd.",
+      "isin": "INF459K01EH6",
+      "category": "Sectoral - Technology",
+      "units": 350.50,
+      "current_nav": 168.23,
+      "current_value": 58968.52,
+      "sip_amount": 5000,
+      "sip_start_date": "2023-03-01"
+    },
+    {
+      "scheme_name": "HDFC Index Fund - Nifty 50 Plan - Direct Plan - Growth",
+      "scheme_code": "118960",
+      "amc": "HDFC Asset Management Co. Ltd.",
+      "isin": "INF17VJ011X3",
+      "category": "Index Fund",
+      "units": 500.00,
+      "current_nav": 185.67,
+      "current_value": 92835.00,
+      "lumpsum_investment": 90000,
+      "investment_date": "2022-01-15"
+    }
+  ],
+  "total_value": 336867.08,
+  "analysis_date": "2024-01-15"
+}

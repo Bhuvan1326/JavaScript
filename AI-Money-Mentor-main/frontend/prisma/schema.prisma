@@ -1,0 +1,82 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String        @id @default(uuid())
+  telegramId    String?       @unique
+  email         String?       @unique
+  password      String?
+  name          String?
+  phone         String?
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+  
+  portfolio     Portfolio?
+  taxProfiles   TaxProfile[]
+  fireGoals     FIREGoal[]
+  healthScores  HealthScore[]
+  chatHistory   ChatMessage[]
+}
+
+model Portfolio {
+  id            String   @id @default(uuid())
+  userId        String   @unique
+  user          User     @relation(fields: [userId], references: [id])
+  totalValue    Float
+  xirr          Float
+  sharpeRatio   Float
+  sortinoRatio  Float
+  holdings      String   // JSON
+  lastUpdated   DateTime @default(now())
+}
+
+model TaxProfile {
+  id            String   @id @default(uuid())
+  userId        String
+  user          User     @relation(fields: [userId], references: [id])
+  financialYear String
+  regime        String
+  grossIncome   Float
+  deductions80C Float
+  deductions80D Float
+  taxPayable    Float
+  createdAt     DateTime @default(now())
+}
+
+model FIREGoal {
+  id              String   @id @default(uuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id])
+  targetCorpus    Float
+  monthlyExpenses Float
+  targetYears     Int
+  monthlySIP      Float
+  createdAt       DateTime @default(now())
+}
+
+model HealthScore {
+  id            String   @id @default(uuid())
+  userId        String
+  user          User     @relation(fields: [userId], references: [id])
+  overallScore  Int
+  emergencyFund Float
+  savingsRate   Float
+  debtToIncome  Float
+  createdAt     DateTime @default(now())
+}
+
+model ChatMessage {
+  id         String   @id @default(uuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id])
+  agentType  String
+  query      String
+  response   String
+  createdAt  DateTime @default(now())
+}
